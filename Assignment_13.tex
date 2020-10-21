@@ -1,0 +1,163 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment-13}
+\author{Ankur Aditya - EE20RESCH11010}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document contains the problem related to computations concerning subspaces. (Hoffman:- Page-66,Q-7) 
+\end{abstract}
+Download the latex-file codes from 
+\begin{lstlisting}
+https://github.com/ankuraditya13/EE5609-Assignment13
+\end{lstlisting}
+
+\section{Problem}
+Let $\vec{A}$ be an m x n matrix over the field $\vec{F}$, and consider the system of equations $\vec{AX}=\vec{Y}$. Prove that this system of equations has a solutions if and only if the row rank of $\vec{A}$ is equal to the row rank of augmented matrix of the system. 
+\section{Solution}
+Consider $\vec{A}$ as,
+\begin{align}
+\vec{A} = \myvec{a_{11}&a_{12}&a_{13}&\cdots&a_{1n}\\a_{21}&a_{22}&a_{23}&\cdots&a_{2n}\\\vdots&\vdots&\vdots&\vdots&\vdots\\a_{m1}&a_{m2}&a_{m3}&\cdots&a_{mn}}_{mxn}
+\end{align} 
+Now to solve the equation $\vec{AX}=\vec{Y}$ for $\vec{X}$, we first write its augmented matrix $\myvec{\vec{A}&\vrule&\vec{Y}}$ and then convert it into row reduced echelon form given as $\myvec{\vec{R}&\vrule&\vec{Y'}}$. Here $\vec{R}$ is the row reduced form of matrix $\vec{A}$. Also we know that, for $\vec{AX}=\vec{Y}$ to have a solution, $\vec{Y}$ should be in column space of $\vec{A}$.
+\begin{align}
+\myvec{\vec{A}&\vrule&\vec{Y}} = \myvec{a_{11}&a_{12}&\cdots&a_{1n}&\vrule&y_{1} \\a_{21}&a_{22}&\cdots&a_{2n}&\vrule&y_{2}\\\vdots&\vdots&\vdots&\vdots&\vrule&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}&\vrule&y_{m}}
+\end{align} 
+Assume that the last \textbf{k} rows of $\vec{R}$ are zero rows.This implies that we have \textbf{k} number of linear dependent rows in matrix $\vec{A}$. Hence the row rank of matrix $\vec{A}$ is \textbf{r} = m-k. As there are m-k number of non-zero vectors in the row of $\vec{R}$.  
+\begin{align}
+\therefore \myvec{\vec{R}&\vrule&\vec{Y'}} = \myvec{1&a'_{12}&\cdots&a'_{1n}&\vrule&y'_{1} \\0&1&\cdots&a_{2n}&\vrule&y'_{2}\\\vdots&\vdots&\vdots&\vdots&\vrule&\vdots\\0&0&\cdots&0&\vrule&y'_{m-k}\\\vdots&\vdots&\ddots&\vdots&\vrule&\vdots\\0&0&\cdots&0&\vrule&y'_{m-1}\\0&0&\cdots&0&\vrule&y'_{m}}\label{rref}
+\end{align}
+Also from equation \eqref{rref} it can be observed that for   $\vec{AX}=\vec{Y}$ to have a solution,
+\begin{align}
+y'_{m-k} = y'_{m-k-1} = \cdots = y'_{m-1} = y'_{m} = 0 
+\end{align} 
+Hence, the rank of $\myvec{\vec{R}&\vrule&\vec{Y'}}$ is, also $\vec{r}$. This implies rank of augmented matrix $\myvec{\vec{A}&\vrule&\vec{Y}}$ is also \textbf{r}. \\
+\centerline{\textbf{Hence Proved.}}
+\end{document}
