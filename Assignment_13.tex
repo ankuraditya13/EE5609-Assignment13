@@ -146,18 +146,22 @@ Consider $\vec{A}$ as,
 \begin{align}
 \vec{A} = \myvec{a_{11}&a_{12}&a_{13}&\cdots&a_{1n}\\a_{21}&a_{22}&a_{23}&\cdots&a_{2n}\\\vdots&\vdots&\vdots&\vdots&\vdots\\a_{m1}&a_{m2}&a_{m3}&\cdots&a_{mn}}_{mxn}
 \end{align} 
-Now to solve the equation $\vec{AX}=\vec{Y}$ for $\vec{X}$, we first write its augmented matrix $\myvec{\vec{A}&\vrule&\vec{Y}}$ and then convert it into row reduced echelon form given as $\myvec{\vec{R}&\vrule&\vec{Y'}}$. Here $\vec{R}$ is the row reduced form of matrix $\vec{A}$. Also we know that, for $\vec{AX}=\vec{Y}$ to have a solution, $\vec{Y}$ should be in column space of $\vec{A}$.
+Now to solve the equation $\vec{AX}=\vec{Y}$ for $\vec{X}$, we first write its augmented matrix $\vec{A_Y}$ and then convert it into row reduced echelon form given as $\vec{R_Y'}$. Here $\vec{R}$ is the row reduced form of matrix $\vec{A}$. Also we know that, for $\vec{AX}=\vec{Y}$ to have a solution, $\vec{Y}$ should be in column space of $\vec{A}$.
 \begin{align}
-\myvec{\vec{A}&\vrule&\vec{Y}} = \myvec{a_{11}&a_{12}&\cdots&a_{1n}&\vrule&y_{1} \\a_{21}&a_{22}&\cdots&a_{2n}&\vrule&y_{2}\\\vdots&\vdots&\vdots&\vdots&\vrule&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}&\vrule&y_{m}}
+\vec{A_Y} = \myvec{a_{11}&a_{12}&\cdots&a_{1n}&\vrule&y_{1} \\a_{21}&a_{22}&\cdots&a_{2n}&\vrule&y_{2}\\\vdots&\vdots&\vdots&\vdots&\vrule&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}&\vrule&y_{m}}
 \end{align} 
-Assume that the last \textbf{k} rows of $\vec{R}$ are zero rows.This implies that we have \textbf{k} number of linear dependent rows in matrix $\vec{A}$. Hence the row rank of matrix $\vec{A}$ is \textbf{r} = m-k. As there are m-k number of non-zero vectors in the row of $\vec{R}$.  
+Assume that the last \textbf{k} rows of $\vec{R}$ are zero rows.This implies that we have \textbf{k} number of linear dependent rows in matrix $\vec{A}$. Hence the row rank of matrix $\vec{A}$ is \textbf{r} = m-k. As there are m-k number of non-zero vectors in the row of $\vec{R}$. Now, 
 \begin{align}
-\therefore \myvec{\vec{R}&\vrule&\vec{Y'}} = \myvec{1&a'_{12}&\cdots&a'_{1n}&\vrule&y'_{1} \\0&1&\cdots&a_{2n}&\vrule&y'_{2}\\\vdots&\vdots&\vdots&\vdots&\vrule&\vdots\\0&0&\cdots&0&\vrule&y'_{m-k}\\\vdots&\vdots&\ddots&\vdots&\vrule&\vdots\\0&0&\cdots&0&\vrule&y'_{m-1}\\0&0&\cdots&0&\vrule&y'_{m}}\label{rref}
+\vec{R} = \vec{CA} = \vec{C} \myvec{a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\vdots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}}
+\end{align}
+Here, $\vec{C}$ is a matrix which converts $\vec{A}$ to $\vec{R}$ 
+\begin{align}
+\therefore \vec{R_Y'} = \myvec{1&a'_{12}&\cdots&a'_{1n}&\vrule&y'_{1} \\0&1&\cdots&a_{2n}&\vrule&y'_{2}\\\vdots&\vdots&\vdots&\vdots&\vrule&\vdots\\0&0&\cdots&0&\vrule&y'_{m-k}\\\vdots&\vdots&\ddots&\vdots&\vrule&\vdots\\0&0&\cdots&0&\vrule&y'_{m-1}\\0&0&\cdots&0&\vrule&y'_{m}}\label{rref}
 \end{align}
 Also from equation \eqref{rref} it can be observed that for   $\vec{AX}=\vec{Y}$ to have a solution,
 \begin{align}
 y'_{m-k} = y'_{m-k-1} = \cdots = y'_{m-1} = y'_{m} = 0 
 \end{align} 
-Hence, the rank of $\myvec{\vec{R}&\vrule&\vec{Y'}}$ is, also $\vec{r}$. This implies rank of augmented matrix $\myvec{\vec{A}&\vrule&\vec{Y}}$ is also \textbf{r}. \\
+Hence, the rank of $\vec{R_Y'}$ is, also $\vec{r}$. This implies rank of augmented matrix $\vec{A_Y}$ is also \textbf{r}. \\
 \centerline{\textbf{Hence Proved.}}
 \end{document}
